@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/camp-go-ua/static/css/main.7acaea2f.css",
+    "main.js": "/camp-go-ua/static/js/main.07d3183d.js",
+    "index.html": "/camp-go-ua/index.html",
+    "main.7acaea2f.css.map": "/camp-go-ua/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/camp-go-ua/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
