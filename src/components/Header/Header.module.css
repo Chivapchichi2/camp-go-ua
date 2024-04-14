@@ -1,0 +1,32 @@
+.Header {
+  height: 50px;
+  border-bottom: 2px solid var(--text-color);
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px 0 var(--main-color);
+}
+
+.List {
+  display: flex;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavLink {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  margin: 0 0 0 7px;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Header .NavLink:hover,
+.Header .NavLink:focus {
+  transform: scale(1.1);
+}
