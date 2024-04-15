@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcamp_go_ua=self.webpackChunkcamp_go_ua||[]).push([[223],{983:function(e,a,n){n.r(a);var u=n(184);a.default=function(){return(0,u.jsx)(u.Fragment,{children:(0,u.jsx)("h1",{children:"Home Page"})})}}}]);
-//# sourceMappingURL=home-page.26897da5.chunk.js.map
