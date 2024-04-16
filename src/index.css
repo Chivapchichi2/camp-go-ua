@@ -1,6 +1,12 @@
 @import-normalize; /* bring in normalize.css styles */
 @import url('./css/variables.css');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Reset styles */
 h1,
 h2,
@@ -50,6 +56,15 @@ a.active {
   color: var(--button-hover-color);
 }
 
+button.activated {
+  border-color: var(--button-color);
+}
+
 .hidden {
   display: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
