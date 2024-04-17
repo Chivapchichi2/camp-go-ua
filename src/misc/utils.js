@@ -7,7 +7,7 @@ export const makePluralOrSingular = (text, attribute) => {
     attribute.charAt(attribute.length - 1) === 's'
       ? attribute.slice(0, -1)
       : attribute;
-  return (text += text > 1 ? ' ' + attribute + 's' : ' ' + attribute);
+  return text + text > 1 ? ' ' + attribute + 's' : ' ' + attribute;
 };
 
 const formatter = new Intl.NumberFormat('en-IE', {
@@ -18,7 +18,7 @@ const formatter = new Intl.NumberFormat('en-IE', {
 
 const firstThreeKeysWithNonFalsyValues = obj =>
   Object.entries(obj)
-    .filter(([key, value]) => value !== 0 && value !== '')
+    .filter(([, value]) => value !== 0 && value !== '')
     .slice(0, 3)
     .reduce((obj, [key, value]) => {
       obj[key] = value;

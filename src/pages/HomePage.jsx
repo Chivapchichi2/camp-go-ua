@@ -60,7 +60,6 @@ const testData = {
 };
 
 const HomePage = () => {
-  const parsedData = parseDataForCatalog(testData);
   return (
     <>
       <h1>Home Page</h1>

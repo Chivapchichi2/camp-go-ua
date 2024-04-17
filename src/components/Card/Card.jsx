@@ -15,7 +15,6 @@ const Card = ({
   price,
   rating,
 }) => {
-  const favorite = true;
   const attributesArray = Object.entries(attributes);
   return (
     <div className={styles.Card}>
