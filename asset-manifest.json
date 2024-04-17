@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/camp-go-ua/static/css/main.60508d88.css",
-    "main.js": "/camp-go-ua/static/js/main.7492376d.js",
-    "home-page.css": "/camp-go-ua/static/css/home-page.7c774183.chunk.css",
-    "home-page.js": "/camp-go-ua/static/js/home-page.8528804c.chunk.js",
+    "main.js": "/camp-go-ua/static/js/main.e76bc239.js",
+    "home-page.css": "/camp-go-ua/static/css/home-page.a26e5a99.chunk.css",
+    "home-page.js": "/camp-go-ua/static/js/home-page.f1eaa80d.chunk.js",
     "catalog-page.js": "/camp-go-ua/static/js/catalog-page.271e92d3.chunk.js",
     "favorites-page.js": "/camp-go-ua/static/js/favorites-page.03342695.chunk.js",
     "static/media/AC.svg": "/camp-go-ua/static/media/AC.6681f2b7b0c35e24c99584017ab3dd62.svg",
@@ -32,14 +32,14 @@
     "static/media/TV.svg": "/camp-go-ua/static/media/TV.1152595f23cc74ffd5509b9a46242d77.svg",
     "static/media/Kitchen.svg": "/camp-go-ua/static/media/Kitchen.013d9240249f9fd10ef71468661efe3e.svg",
     "main.60508d88.css.map": "/camp-go-ua/static/css/main.60508d88.css.map",
-    "main.7492376d.js.map": "/camp-go-ua/static/js/main.7492376d.js.map",
-    "home-page.7c774183.chunk.css.map": "/camp-go-ua/static/css/home-page.7c774183.chunk.css.map",
-    "home-page.8528804c.chunk.js.map": "/camp-go-ua/static/js/home-page.8528804c.chunk.js.map",
+    "main.e76bc239.js.map": "/camp-go-ua/static/js/main.e76bc239.js.map",
+    "home-page.a26e5a99.chunk.css.map": "/camp-go-ua/static/css/home-page.a26e5a99.chunk.css.map",
+    "home-page.f1eaa80d.chunk.js.map": "/camp-go-ua/static/js/home-page.f1eaa80d.chunk.js.map",
     "catalog-page.271e92d3.chunk.js.map": "/camp-go-ua/static/js/catalog-page.271e92d3.chunk.js.map",
     "favorites-page.03342695.chunk.js.map": "/camp-go-ua/static/js/favorites-page.03342695.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.60508d88.css",
-    "static/js/main.7492376d.js"
+    "static/js/main.e76bc239.js"
   ]
 }
