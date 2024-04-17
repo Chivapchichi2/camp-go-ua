@@ -14,6 +14,7 @@ import { ReactComponent as Transmission } from '../../../icons/Transmission.svg'
 import { ReactComponent as TV } from '../../../icons/TV.svg';
 import { ReactComponent as Users } from '../../../icons/Users.svg';
 import { ReactComponent as Water } from '../../../icons/Water.svg';
+import { firstToUpperCase, makePluralOrSingular } from '../../../misc/utils';
 
 import styles from './Attribute.module.css';
 
@@ -29,34 +30,34 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'bathroom':
       IconComponent = Shower;
-      text = 'Bathroom';
+      text = firstToUpperCase(attribute);
       break;
     case 'beds':
       IconComponent = Bed;
-      text += text > 1 ? ' beds' : ' bed';
+      text = makePluralOrSingular(text, attribute);
       break;
     case 'CD':
       IconComponent = CD;
-      text = 'CD';
+      text = attribute;
       break;
     case 'freezer':
       IconComponent = Freezer;
-      text = 'Freezer';
+      text = firstToUpperCase(attribute);
       break;
     case 'gas':
       IconComponent = Gas;
       break;
     case 'hob':
       IconComponent = Hob;
-      text += ' hob';
+      text = makePluralOrSingular(text, attribute);
       break;
     case 'kitchen':
       IconComponent = Kitchen;
-      text = 'Kitchen';
+      text = firstToUpperCase(attribute);
       break;
     case 'microwave':
       IconComponent = Microwave;
-      text = 'Microwave';
+      text = firstToUpperCase(attribute);
       break;
     case 'engine':
       IconComponent = Petrol;
@@ -64,26 +65,27 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'radio':
       IconComponent = Radio;
-      text = 'Radio';
+      text = firstToUpperCase(attribute);
       break;
     case 'shower':
       IconComponent = Shower;
-      text = 'Shower';
+      text = makePluralOrSingular(text, attribute);
       break;
     case 'toilet':
       IconComponent = ToiletPaper;
-      text = 'Toilet';
+      text = makePluralOrSingular(text, attribute);
       break;
     case 'transmission':
       IconComponent = Transmission;
+      text = firstToUpperCase(text);
       break;
     case 'TV':
       IconComponent = TV;
-      text = 'TV';
+      text = attribute;
       break;
     case 'adults':
       IconComponent = Users;
-      text += text > 1 ? ' adults' : ' adult';
+      text = makePluralOrSingular(text, attribute);
       break;
     case 'water':
       IconComponent = Water;
