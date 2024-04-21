@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcamp_go_ua=self.webpackChunkcamp_go_ua||[]).push([[952],{5697:function(e,a,n){n.r(a);var u=n(184);a.default=function(){return(0,u.jsx)(u.Fragment,{children:(0,u.jsx)("h1",{children:"Favorites Page"})})}}}]);
+//# sourceMappingURL=favorites-page.b4c66de1.chunk.js.map
