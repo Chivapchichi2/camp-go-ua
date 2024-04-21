@@ -8,9 +8,9 @@ import { ReactComponent as Alcove } from '../../../icons/Alcove.svg';
 import { ReactComponent as PanelTruck } from '../../../icons/PanelTruck.svg';
 import style from './EquipmentBtn.module.css';
 
-const EquipmentBtn = ({ text, handleClick = () => {} }) => {
+const EquipmentBtn = ({ text, handleClick, isActive }) => {
   if (!text) return null;
-
+  console.log(isActive);
   let IconComponent;
   switch (text) {
     case 'AC':
@@ -42,7 +42,13 @@ const EquipmentBtn = ({ text, handleClick = () => {} }) => {
   }
 
   return (
-    <button className={style.EquipmentBtn} onClick={handleClick}>
+    <button
+      type="submit"
+      className={
+        isActive ? style.EquipmentBtn + ' ' + isActive : style.EquipmentBtn
+      }
+      onClick={handleClick}
+    >
       {IconComponent && <IconComponent />}
       {text}
     </button>

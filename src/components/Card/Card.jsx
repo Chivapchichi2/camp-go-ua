@@ -5,6 +5,9 @@ import styles from './Card.module.css';
 import Attribute from '../general/Attribute';
 import Button from '../general/Button';
 import FavoriteButton from '../general/FavoriteButton';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFavorite } from '../../store/campers/campersSlice';
+import { selectFavoriteCampers } from '../../store/selectors';
 
 const Card = ({
   attributes,
@@ -14,10 +17,17 @@ const Card = ({
   name,
   price,
   rating,
+  id,
 }) => {
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavoriteCampers);
+  const isFavorite = favorites.includes(id);
   const attributesArray = Object.entries(attributes);
+  const handelClick = () => {
+    dispatch(toggleFavorite(id));
+  };
   return (
-    <div className={styles.Card}>
+    <li className={styles.Card}>
       <div className={styles.containerImage}>
         <img className={styles.cardImage} src={image} alt={name} />
       </div>
@@ -26,7 +36,7 @@ const Card = ({
           <h2 className={styles.title}>{name}</h2>
           <div>
             <span className={styles.price}>{price}</span>
-            <FavoriteButton onClick={() => console.log('clicked')} />
+            <FavoriteButton onClick={handelClick} isFavorite={isFavorite} />
           </div>
         </div>
         <div className={styles.infoContainer}>
@@ -45,7 +55,7 @@ const Card = ({
         </ul>
         <Button text={'Show more'} />
       </div>
-    </div>
+    </li>
   );
 };
 

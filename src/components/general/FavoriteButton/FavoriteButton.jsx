@@ -3,10 +3,8 @@ import { ReactComponent as HeartFull } from '../../../icons/HeartFull.svg';
 import style from './FavoriteButton.module.css';
 import { useState } from 'react';
 
-const FavoriteButton = ({ onClick }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+const FavoriteButton = ({ onClick, isFavorite }) => {
   const handleClick = () => {
-    setIsFavorite(prev => !prev);
     onClick();
   };
   return (

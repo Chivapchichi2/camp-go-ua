@@ -11,6 +11,7 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
     favorites: [],
+    page: 1,
     isLoading: false,
     error: null,
   },
@@ -27,6 +28,10 @@ const campersSlice = createSlice({
       }
 
       state.favorites = favorites;
+    },
+
+    setPage: (state, { payload }) => {
+      state.page = payload;
     },
   },
 
@@ -45,5 +50,5 @@ const campersSlice = createSlice({
   },
 });
 
-export const { toggleFavorite } = campersSlice.actions;
+export const { setPage, toggleFavorite } = campersSlice.actions;
 export const campersReducer = campersSlice.reducer;

@@ -3,6 +3,7 @@ import Button from '../components/general/Button';
 import EquipmentBtn from '../components/general/EquipmentBtn';
 import Card from '../components/Card';
 import { parseDataForCatalog } from '../misc/utils';
+import FilterForm from '../components/FilterForm';
 
 const testData = {
   _id: '8',
@@ -82,6 +83,11 @@ const HomePage = () => {
         }}
       />
       <Card {...parseDataForCatalog(testData)} />
+      <FilterForm
+        onSubmit={data => {
+          console.log(data);
+        }}
+      />
     </>
   );
 };

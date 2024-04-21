@@ -28,17 +28,18 @@ const firstThreeKeysWithNonFalsyValues = obj =>
 export const parseDataForCatalog = data => {
   const { adults, engine, transmission, details } = data;
   return {
-    name: data.name,
+    name: data.name.length > 29 ? data.name.slice(0, 26) + '...' : data.name,
     image: data.gallery[0],
     price: formatter.format(data.price),
     rating: data.rating + ' (' + data.reviews.length + ' reviews)',
     location: data.location,
-    description: data.description.slice(0, 65) + '...',
+    description: data.description.slice(0, 64) + '...',
     attributes: {
       adults,
       engine,
       transmission,
       ...firstThreeKeysWithNonFalsyValues(details),
     },
+    id: data._id,
   };
 };

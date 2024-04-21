@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Container from './Container';
 import Header from './Header';
-// import Loader from './Loader';
+import Loader from './Loader';
 // import Cast from './MovieDetails/Cast';
 // import Reviews from './MovieDetails/Reviews';
 
@@ -10,7 +10,10 @@ const HomePage = lazy(
   () => import('../pages/HomePage' /* webpackChunkName: "home-page" */)
 );
 const CatalogPage = lazy(
-  () => import('../pages/CatalogPage' /* webpackChunkName: "catalog-page" */)
+  () =>
+    import(
+      '../pages/CatalogPage/CatalogPage' /* webpackChunkName: "catalog-page" */
+    )
 );
 const FavoritesPage = lazy(
   () =>
@@ -19,8 +22,7 @@ const FavoritesPage = lazy(
 
 export const App = () => (
   <Container>
-    {/*<Suspense fallback={<Loader />}>*/}
-    <Suspense fallback="loading ...">
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<HomePage />} />
