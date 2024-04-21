@@ -1,7 +1,6 @@
 import { ReactComponent as Heart } from '../../../icons/Heart.svg';
 import { ReactComponent as HeartFull } from '../../../icons/HeartFull.svg';
 import style from './FavoriteButton.module.css';
-import { useState } from 'react';
 
 const FavoriteButton = ({ onClick, isFavorite }) => {
   const handleClick = () => {
