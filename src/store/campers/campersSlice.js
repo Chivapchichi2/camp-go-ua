@@ -5,6 +5,8 @@ import {
   pendingReducer,
   rejectedReducer,
 } from '../generalReducers';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 const campersSlice = createSlice({
   name: 'campers',
@@ -51,4 +53,10 @@ const campersSlice = createSlice({
 });
 
 export const { setPage, toggleFavorite } = campersSlice.actions;
-export const campersReducer = campersSlice.reducer;
+
+const persistedReducer = persistReducer(
+  { key: 'campers', storage },
+  campersSlice.reducer
+);
+
+export default persistedReducer;

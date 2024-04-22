@@ -8,7 +8,6 @@ import { selectFilter } from '../../store/selectors';
 
 const FilterForm = ({ onSubmit }) => {
   const filterData = useSelector(selectFilter);
-  console.log(filterData.details);
   const { register, handleSubmit, setValue, getValues } = useForm({
     defaultValues: filterData,
   });

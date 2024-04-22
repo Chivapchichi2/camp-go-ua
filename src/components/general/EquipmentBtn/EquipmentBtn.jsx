@@ -10,7 +10,6 @@ import style from './EquipmentBtn.module.css';
 
 const EquipmentBtn = ({ text, handleClick, isActive }) => {
   if (!text) return null;
-  console.log(isActive);
   let IconComponent;
   switch (text) {
     case 'AC':
