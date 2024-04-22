@@ -8,7 +8,6 @@ import FavoriteButton from '../general/FavoriteButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite } from '../../store/campers/campersSlice';
 import { selectFavoriteCampers } from '../../store/selectors';
-import button from '../general/Button';
 
 const Card = ({
   attributes,
