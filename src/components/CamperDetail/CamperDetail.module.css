@@ -1,0 +1,62 @@
+.modalWrap {
+  position: relative;
+  width: 982px;
+  height: 720px;
+  padding: 40px 16px 40px 40px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.scrollWrap {
+  overflow-y: auto;
+  padding-right: 20px;
+  margin-top: 24px;
+  height: 460px;
+}
+
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ratingLocatedWrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.imageWrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.rating {
+  margin-right: 12px;
+  text-decoration: underline;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-right: 10px;
+}
+
+.image {
+  width: 290px;
+  height: 310px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: 60%;
+}

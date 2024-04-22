@@ -8,6 +8,7 @@ import FavoriteButton from '../general/FavoriteButton';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleFavorite } from '../../store/campers/campersSlice';
 import { selectFavoriteCampers } from '../../store/selectors';
+import button from '../general/Button';
 
 const Card = ({
   attributes,
@@ -18,6 +19,7 @@ const Card = ({
   price,
   rating,
   id,
+  showMoreClick,
 }) => {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavoriteCampers);
@@ -25,6 +27,9 @@ const Card = ({
   const attributesArray = Object.entries(attributes);
   const handelClick = () => {
     dispatch(toggleFavorite(id));
+  };
+  const handelShowMoreClick = () => {
+    showMoreClick(id);
   };
   return (
     <li className={styles.Card}>
@@ -53,7 +58,11 @@ const Card = ({
             </li>
           ))}
         </ul>
-        <Button text={'Show more'} />
+        <Button
+          text={'Show more'}
+          type={'button'}
+          onClick={handelShowMoreClick}
+        />
       </div>
     </li>
   );

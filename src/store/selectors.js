@@ -6,6 +6,9 @@ export const selectIsLoading = state => state.campers.isLoading;
 export const selectError = state => state.campers.isLoading;
 export const selectPage = state => state.campers.page;
 export const selectFilter = state => state.filter;
+export const selectCamperById = id => state => {
+  return state.campers.items.find(camper => camper._id === id);
+};
 
 export const selectCampers = createSelector(
   [selectAllCampers, selectFilter, selectPage],

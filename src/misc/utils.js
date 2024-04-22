@@ -10,11 +10,14 @@ export const makePluralOrSingular = (text, attribute) => {
   return text + text > 1 ? ' ' + attribute + 's' : ' ' + attribute;
 };
 
-const formatter = new Intl.NumberFormat('en-IE', {
+export const formatter = new Intl.NumberFormat('en-IE', {
   style: 'currency',
   currency: 'EUR',
   minimumFractionDigits: 2,
 });
+
+export const formatRating = data =>
+  data.rating + ' (' + data.reviews.length + ' reviews)';
 
 const firstThreeKeysWithNonFalsyValues = obj =>
   Object.entries(obj)
@@ -31,7 +34,7 @@ export const parseDataForCatalog = data => {
     name: data.name.length > 29 ? data.name.slice(0, 26) + '...' : data.name,
     image: data.gallery[0],
     price: formatter.format(data.price),
-    rating: data.rating + ' (' + data.reviews.length + ' reviews)',
+    rating: formatRating(data),
     location: data.location,
     description: data.description.slice(0, 64) + '...',
     attributes: {
