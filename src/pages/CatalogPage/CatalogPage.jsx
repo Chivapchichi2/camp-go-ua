@@ -46,7 +46,7 @@ const CatalogPage = () => {
     <>
       {showModal && (
         <Modal onClose={toggleModal} onClick={toggleModal}>
-          <CamperDetail id={showMoreId} />
+          <CamperDetail id={showMoreId} onClick={toggleModal} />
         </Modal>
       )}
       <div className={styles.Catalog}>

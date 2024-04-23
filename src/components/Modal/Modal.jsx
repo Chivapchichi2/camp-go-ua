@@ -31,7 +31,7 @@ const Modal = ({ onClose, children }) => {
 
   return createPortal(
     <div className={styles.Overlay} onClick={handleBackdropClick}>
-      <div className={styles.Modal}>{children}</div>
+      {children}
     </div>,
     modalRoot
   );
