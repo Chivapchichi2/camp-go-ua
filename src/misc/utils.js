@@ -7,7 +7,7 @@ export const makePluralOrSingular = (text, attribute) => {
     attribute.charAt(attribute.length - 1) === 's'
       ? attribute.slice(0, -1)
       : attribute;
-  return text + text > 1 ? ' ' + attribute + 's' : ' ' + attribute;
+  return text > 1 ? ' ' + attribute + 's' : ' ' + attribute;
 };
 
 export const formatter = new Intl.NumberFormat('en-IE', {
@@ -44,5 +44,20 @@ export const parseDataForCatalog = data => {
       ...firstThreeKeysWithNonFalsyValues(details),
     },
     id: data._id,
+  };
+};
+
+export const parseDataForFeature = data => {
+  const { adults, engine, transmission, details } = data;
+  return {
+    features: { adults, engine, transmission, ...details },
+    details: {
+      Form: firstToUpperCase(data.form),
+      Length: data.length,
+      Width: data.width,
+      Height: data.height,
+      Tank: data.tank,
+      Consumption: data.consumption,
+    },
   };
 };

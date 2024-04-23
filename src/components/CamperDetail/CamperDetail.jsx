@@ -4,12 +4,16 @@ import { ReactComponent as Cross } from '../../icons/Cross.svg';
 
 import { useSelector } from 'react-redux';
 import { selectCamperById } from '../../store/selectors';
+import { formatRating, formatter, parseDataForFeature } from '../../misc/utils';
+import { useRef, useState } from 'react';
 import styles from './CamperDetail.module.css';
-import { formatRating, formatter } from '../../misc/utils';
+import Features from './Features';
 
 const CamperDetail = ({ id, onClick }) => {
   const camperData = useSelector(selectCamperById(id));
   console.log(camperData);
+  const container = useRef();
+  const [extended, setExtended] = useState(false);
 
   const toggleActive = e => {
     const children = Array.from(e.currentTarget.parentNode.children);
@@ -19,10 +23,21 @@ const CamperDetail = ({ id, onClick }) => {
       }
     });
     e.currentTarget.classList.toggle(styles.active);
+    const extended = e.currentTarget.classList.contains(styles.active);
+    container.current?.classList.toggle(styles.extended, extended);
+    setExtended(extended);
+    if (extended) {
+      setTimeout(() => {
+        container.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'end',
+        });
+      }, 300);
+    }
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={container}>
       <div className={styles.titleContainer}>
         <h2 className={styles.title}>{camperData?.name}</h2>
         <button type="button" onClick={onClick}>
@@ -57,6 +72,7 @@ const CamperDetail = ({ id, onClick }) => {
           Reviews
         </button>
       </div>
+      {extended && <Features data={parseDataForFeature(camperData)} />}
     </div>
   );
 };

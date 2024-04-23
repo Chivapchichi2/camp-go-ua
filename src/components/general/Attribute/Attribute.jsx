@@ -8,10 +8,10 @@ import { ReactComponent as Kitchen } from '../../../icons/Kitchen.svg';
 import { ReactComponent as Microwave } from '../../../icons/Microwave.svg';
 import { ReactComponent as Petrol } from '../../../icons/Petrol.svg';
 import { ReactComponent as Radio } from '../../../icons/Radio.svg';
-import { ReactComponent as Shower } from '../../../icons/Shower.svg';
+import { ReactComponent as Shower } from '../../../icons/ShowerSmall.svg';
 import { ReactComponent as ToiletPaper } from '../../../icons/ToiletPaper.svg';
 import { ReactComponent as Transmission } from '../../../icons/Transmission.svg';
-import { ReactComponent as TV } from '../../../icons/TV.svg';
+import { ReactComponent as TV } from '../../../icons/TVsmall.svg';
 import { ReactComponent as Users } from '../../../icons/Users.svg';
 import { ReactComponent as Water } from '../../../icons/Water.svg';
 import { firstToUpperCase, makePluralOrSingular } from '../../../misc/utils';
@@ -34,7 +34,7 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'beds':
       IconComponent = Bed;
-      text = makePluralOrSingular(text, attribute);
+      text += makePluralOrSingular(text, attribute);
       break;
     case 'CD':
       IconComponent = CD;
@@ -46,10 +46,11 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'gas':
       IconComponent = Gas;
+      text = firstToUpperCase(attribute) + ' ' + text;
       break;
     case 'hob':
       IconComponent = Hob;
-      text = makePluralOrSingular(text, attribute);
+      text += makePluralOrSingular(text, attribute);
       break;
     case 'kitchen':
       IconComponent = Kitchen;
@@ -61,7 +62,7 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'engine':
       IconComponent = Petrol;
-      text = 'Petrol';
+      text = firstToUpperCase(text);
       break;
     case 'radio':
       IconComponent = Radio;
@@ -69,11 +70,11 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'shower':
       IconComponent = Shower;
-      text = makePluralOrSingular(text, attribute);
+      text += makePluralOrSingular(text, attribute);
       break;
     case 'toilet':
       IconComponent = ToiletPaper;
-      text = makePluralOrSingular(text, attribute);
+      text += makePluralOrSingular(text, attribute);
       break;
     case 'transmission':
       IconComponent = Transmission;
@@ -85,10 +86,11 @@ const Attribute = ({ attribute, text }) => {
       break;
     case 'adults':
       IconComponent = Users;
-      text = makePluralOrSingular(text, attribute);
+      text += makePluralOrSingular(text, attribute);
       break;
     case 'water':
       IconComponent = Water;
+      text = firstToUpperCase(attribute) + ' ' + text;
       break;
     default:
       IconComponent = null;
@@ -97,7 +99,7 @@ const Attribute = ({ attribute, text }) => {
 
   return (
     <div className={styles.Attribute}>
-      {IconComponent && <IconComponent width="20px" height="20px" />}
+      {IconComponent && <IconComponent height="20px" />}
       <span>{text}</span>
     </div>
   );
