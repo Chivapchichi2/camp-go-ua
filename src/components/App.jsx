@@ -5,7 +5,7 @@ import Header from './Header';
 import Loader from './Loader';
 
 const HomePage = lazy(
-  () => import('../pages/HomePage' /* webpackChunkName: "home-page" */)
+  () => import('../pages/HomePage/HomePage' /* webpackChunkName: "home-page" */)
 );
 const CatalogPage = lazy(
   () =>
@@ -15,7 +15,9 @@ const CatalogPage = lazy(
 );
 const FavoritesPage = lazy(
   () =>
-    import('../pages/FavoritesPage' /* webpackChunkName: "favorites-page" */)
+    import(
+      '../pages/FavoritePage/FavoritesPage' /* webpackChunkName: "favorites-page" */
+    )
 );
 
 export const App = () => (

@@ -2,7 +2,6 @@
   display: flex;
   width: 430px;
   flex-direction: column;
-  margin-top: 44px;
 }
 
 .featuresList {
@@ -35,5 +34,5 @@
   justify-content: space-between;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.33;
 }

@@ -1,0 +1,26 @@
+.form {
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #10182833;
+  flex-shrink: 0;
+  width: 448px;
+  height: 532px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.inputList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.text {
+  margin-bottom: 24px;
+}

@@ -1,0 +1,19 @@
+.textarea {
+  padding: 18px;
+  height: 114px;
+  width: 100%;
+  resize: none;
+  border-radius: 10px;
+  background: var(--inputs-color);
+  border: none;
+  outline: none;
+  /*outline-offset: -5px;*/
+  /*outline-style: none;*/
+  /*outline-color: var(--ultraLightGrey);*/
+  line-height: 1.25;
+}
+
+.label {
+  color: #10182899;
+  line-height: 1.5;
+}

@@ -8,10 +8,10 @@ import { formatRating, formatter, parseDataForFeature } from '../../misc/utils';
 import { useRef, useState } from 'react';
 import styles from './CamperDetail.module.css';
 import Features from './Features';
+import ModalForm from './Form';
 
 const CamperDetail = ({ id, onClick }) => {
   const camperData = useSelector(selectCamperById(id));
-  console.log(camperData);
   const container = useRef();
   const [extended, setExtended] = useState(false);
 
@@ -72,7 +72,10 @@ const CamperDetail = ({ id, onClick }) => {
           Reviews
         </button>
       </div>
-      {extended && <Features data={parseDataForFeature(camperData)} />}
+      <div className={styles.wrapper}>
+        {extended && <Features data={parseDataForFeature(camperData)} />}
+        {extended && <ModalForm />}
+      </div>
     </div>
   );
 };
