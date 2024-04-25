@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/camp-go-ua/static/css/main.3c7c51f6.css",
-    "main.js": "/camp-go-ua/static/js/main.2b46d89f.js",
+    "main.js": "/camp-go-ua/static/js/main.8bcae379.js",
     "home-page.css": "/camp-go-ua/static/css/home-page.e352fcc9.chunk.css",
     "home-page.js": "/camp-go-ua/static/js/home-page.f12d89ba.chunk.js",
-    "catalog-page.css": "/camp-go-ua/static/css/catalog-page.d10bda51.chunk.css",
-    "catalog-page.js": "/camp-go-ua/static/js/catalog-page.661bc1bf.chunk.js",
-    "favorites-page.css": "/camp-go-ua/static/css/favorites-page.ad17ba89.chunk.css",
-    "favorites-page.js": "/camp-go-ua/static/js/favorites-page.83d29de9.chunk.js",
+    "catalog-page.css": "/camp-go-ua/static/css/catalog-page.8360ab4b.chunk.css",
+    "catalog-page.js": "/camp-go-ua/static/js/catalog-page.c42a6e49.chunk.js",
+    "favorites-page.css": "/camp-go-ua/static/css/favorites-page.31d2beb3.chunk.css",
+    "favorites-page.js": "/camp-go-ua/static/js/favorites-page.40098f6c.chunk.js",
     "static/css/276.5527a614.chunk.css": "/camp-go-ua/static/css/276.5527a614.chunk.css",
     "static/js/276.c077a680.chunk.js": "/camp-go-ua/static/js/276.c077a680.chunk.js",
-    "static/js/440.aaab01d0.chunk.js": "/camp-go-ua/static/js/440.aaab01d0.chunk.js",
+    "static/js/762.370fa9bd.chunk.js": "/camp-go-ua/static/js/762.370fa9bd.chunk.js",
     "static/media/camper1.jpg": "/camp-go-ua/static/media/camper1.882671aab70a88787127.jpg",
     "static/media/camper2.jpg": "/camp-go-ua/static/media/camper2.cb94a8af307658242985.jpg",
     "static/media/AC.svg": "/camp-go-ua/static/media/AC.6681f2b7b0c35e24c99584017ab3dd62.svg",
@@ -20,6 +20,7 @@
     "static/media/ToiletPaper.svg": "/camp-go-ua/static/media/ToiletPaper.a39d55459c0c28e066f7a7901c540c23.svg",
     "static/media/Users.svg": "/camp-go-ua/static/media/Users.72c7a0add9759233c951c51a8c6fac51.svg",
     "index.html": "/camp-go-ua/index.html",
+    "static/media/StarEmpty.svg": "/camp-go-ua/static/media/StarEmpty.5960e42e3a5dd0f696ec2ec02d76db83.svg",
     "static/media/Gas.svg": "/camp-go-ua/static/media/Gas.84f14b326a25110afb6cc0d2fc27d792.svg",
     "static/media/Bed.svg": "/camp-go-ua/static/media/Bed.72f21609b5a37c90350c0d90dc8f0973.svg",
     "static/media/Radio.svg": "/camp-go-ua/static/media/Radio.5f08a7d2225ff4fee8600833efe7daec.svg",
@@ -44,19 +45,19 @@
     "static/media/Kitchen.svg": "/camp-go-ua/static/media/Kitchen.013d9240249f9fd10ef71468661efe3e.svg",
     "static/media/Cross.svg": "/camp-go-ua/static/media/Cross.d7457d50d0c2fc47ca82735ef3c29888.svg",
     "main.3c7c51f6.css.map": "/camp-go-ua/static/css/main.3c7c51f6.css.map",
-    "main.2b46d89f.js.map": "/camp-go-ua/static/js/main.2b46d89f.js.map",
+    "main.8bcae379.js.map": "/camp-go-ua/static/js/main.8bcae379.js.map",
     "home-page.e352fcc9.chunk.css.map": "/camp-go-ua/static/css/home-page.e352fcc9.chunk.css.map",
     "home-page.f12d89ba.chunk.js.map": "/camp-go-ua/static/js/home-page.f12d89ba.chunk.js.map",
-    "catalog-page.d10bda51.chunk.css.map": "/camp-go-ua/static/css/catalog-page.d10bda51.chunk.css.map",
-    "catalog-page.661bc1bf.chunk.js.map": "/camp-go-ua/static/js/catalog-page.661bc1bf.chunk.js.map",
-    "favorites-page.ad17ba89.chunk.css.map": "/camp-go-ua/static/css/favorites-page.ad17ba89.chunk.css.map",
-    "favorites-page.83d29de9.chunk.js.map": "/camp-go-ua/static/js/favorites-page.83d29de9.chunk.js.map",
+    "catalog-page.8360ab4b.chunk.css.map": "/camp-go-ua/static/css/catalog-page.8360ab4b.chunk.css.map",
+    "catalog-page.c42a6e49.chunk.js.map": "/camp-go-ua/static/js/catalog-page.c42a6e49.chunk.js.map",
+    "favorites-page.31d2beb3.chunk.css.map": "/camp-go-ua/static/css/favorites-page.31d2beb3.chunk.css.map",
+    "favorites-page.40098f6c.chunk.js.map": "/camp-go-ua/static/js/favorites-page.40098f6c.chunk.js.map",
     "276.5527a614.chunk.css.map": "/camp-go-ua/static/css/276.5527a614.chunk.css.map",
     "276.c077a680.chunk.js.map": "/camp-go-ua/static/js/276.c077a680.chunk.js.map",
-    "440.aaab01d0.chunk.js.map": "/camp-go-ua/static/js/440.aaab01d0.chunk.js.map"
+    "762.370fa9bd.chunk.js.map": "/camp-go-ua/static/js/762.370fa9bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3c7c51f6.css",
-    "static/js/main.2b46d89f.js"
+    "static/js/main.8bcae379.js"
   ]
 }
