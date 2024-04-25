@@ -3,6 +3,7 @@ import FilterForm from '../../components/FilterForm';
 import { changeFilter } from '../../store/filter/filterSlice';
 import {
   selectCampers,
+  selectError,
   selectIsLoading,
   selectPage,
 } from '../../store/selectors';
@@ -14,6 +15,7 @@ import styles from './CatalogPage.module.css';
 import Loader from '../../components/Loader';
 import Modal from '../../components/Modal';
 import CamperDetail from '../../components/CamperDetail';
+import Notification from '../../components/general/Notification';
 
 const CatalogPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,6 +24,7 @@ const CatalogPage = () => {
   const { campers, isShowBtn } = useSelector(selectCampers);
   const page = useSelector(selectPage);
   const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchCampers());
@@ -53,9 +56,10 @@ const CatalogPage = () => {
         <h1 className="hidden">Catalog Page</h1>
         <FilterForm onSubmit={handleFilter} />
         {isLoading && <Loader />}
-        {!isLoading && (
+        {!isLoading && !error && (
           <CardList campers={campers} showMoreClick={handelShowMoreClick} />
         )}
+        {error && <Notification message={error} />}
       </div>
       {isShowBtn && !isLoading && (
         <button className={styles.button} onClick={handleClick}>

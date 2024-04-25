@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectFavorites, selectIsLoading } from '../../store/selectors';
 import styles from './FavoritesPage.module.css';
+import Notification from '../../components/general/Notification';
 
 const FavoritesPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -30,8 +31,10 @@ const FavoritesPage = () => {
         </Modal>
       )}
       {isLoading && <Loader />}
-      {!isLoading && (
+      {!isLoading && campers.length > 0 ? (
         <CardList campers={campers} showMoreClick={handelShowMoreClick} />
+      ) : (
+        <Notification message="No favorites yet" />
       )}
     </div>
   );
