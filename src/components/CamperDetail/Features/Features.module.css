@@ -1,6 +1,7 @@
 .featuresContainer {
   display: flex;
   width: 430px;
+  height: 532px;
   flex-direction: column;
 }
 

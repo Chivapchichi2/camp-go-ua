@@ -9,11 +9,13 @@ import { useRef, useState } from 'react';
 import styles from './CamperDetail.module.css';
 import Features from './Features';
 import ModalForm from './Form';
+import Reviews from './Reviews';
 
 const CamperDetail = ({ id, onClick }) => {
   const camperData = useSelector(selectCamperById(id));
   const container = useRef();
   const [extended, setExtended] = useState(false);
+  const [isFeaturesOpen, setIsFeaturesOpen] = useState(false);
 
   const toggleActive = e => {
     const children = Array.from(e.currentTarget.parentNode.children);
@@ -27,6 +29,7 @@ const CamperDetail = ({ id, onClick }) => {
     container.current?.classList.toggle(styles.extended, extended);
     setExtended(extended);
     if (extended) {
+      setIsFeaturesOpen(e.currentTarget.textContent === 'Features');
       setTimeout(() => {
         container.current.scrollIntoView({
           behavior: 'smooth',
@@ -73,7 +76,11 @@ const CamperDetail = ({ id, onClick }) => {
         </button>
       </div>
       <div className={styles.wrapper}>
-        {extended && <Features data={parseDataForFeature(camperData)} />}
+        {extended && isFeaturesOpen ? (
+          <Features data={parseDataForFeature(camperData)} />
+        ) : (
+          <Reviews data={camperData?.reviews} />
+        )}
         {extended && <ModalForm />}
       </div>
     </div>

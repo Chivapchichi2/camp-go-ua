@@ -9,10 +9,12 @@ export const selectFilter = state => state.filter;
 export const selectCamperById = id => state => {
   return state.campers.items.find(camper => camper._id === id);
 };
-export const selectFavorites = state =>
-  state.campers.items.filter(camper =>
-    state.campers.favorites.includes(camper._id)
-  );
+export const selectFavorites = createSelector(
+  selectAllCampers,
+  state => state.campers.favorites,
+  (campers, favorites) =>
+    campers.filter(camper => favorites.includes(camper._id))
+);
 
 export const selectCampers = createSelector(
   [selectAllCampers, selectFilter, selectPage],
